@@ -47,10 +47,10 @@ jobs:
           platforms: linux/amd64,linux/arm64,linux/arm/v7
           push: true
           tags: |
-            ghcr.io/magiasegura/mihomo/mihomo:latest
-            ghcr.io/magiasegura/mihomo/mihomo:${{ steps.mihomo_version.outputs.VERSION }}
-            magiasegura/mihomo:latest
-            magiasegura/mihomo:${{ steps.mihomo_version.outputs.VERSION }}
+            ghcr.io/${{ github.repository_owner }}/mihomo/mihomo:latest
+            ghcr.io/${{ github.repository_owner }}/mihomo/mihomo:${{ steps.mihomo_version.outputs.VERSION }}
+            ${{ github.repository_owner }}/mihomo:latest
+            ${{ github.repository_owner }}/mihomo:${{ steps.mihomo_version.outputs.VERSION }}
 
       # --- Build mihomo_env ---
       - name: Read version for mihomo_env
@@ -65,10 +65,10 @@ jobs:
           platforms: linux/amd64,linux/arm64,linux/arm/v7
           push: true
           tags: |
-            ghcr.io/magiasegura/mihomo/mihomo_env:latest
-            ghcr.io/magiasegura/mihomo/mihomo_env:${{ steps.mihomo_env_version.outputs.VERSION }}
-            magiasegura/mihomo_env:latest
-            magiasegura/mihomo_env:${{ steps.mihomo_env_version.outputs.VERSION }}
+            ghcr.io/${{ github.repository_owner }}/mihomo/mihomo_env:latest
+            ghcr.io/${{ github.repository_owner }}/mihomo/mihomo_env:${{ steps.mihomo_env_version.outputs.VERSION }}
+            ${{ github.repository_owner }}/mihomo_env:latest
+            ${{ github.repository_owner }}/mihomo_env:${{ steps.mihomo_env_version.outputs.VERSION }}
 
       # # --- Cleanup old versions for mihomo ---
       # - name: Cleanup old GHCR versions (mihomo)
@@ -88,4 +88,5 @@ jobs:
       #     min-versions-to-keep: 5
 
       #     token: ${{ secrets.PACKAGE_TOKEN }}
+
 
