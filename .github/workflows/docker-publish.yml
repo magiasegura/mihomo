@@ -75,7 +75,7 @@ jobs:
       # - name: Cleanup old GHCR versions (mihomo)
       #   uses: actions/delete-package-versions@v4
       #   with:
-      #     package-name: 'magiasegura/mihomo'
+      #     package-name: '${{ github.repository_owner }}/mihomo'
       #     package-type: 'container'
       #     min-versions-to-keep: 5
       #     token: ${{ secrets.PACKAGE_TOKEN }}
@@ -84,11 +84,12 @@ jobs:
       # - name: Cleanup old GHCR versions (mihomo_env)
       #   uses: actions/delete-package-versions@v4
       #   with:
-      #     package-name: 'magiasegura/mihomo_env'
+      #     package-name: '${{ github.repository_owner }}/mihomo_env'
       #     package-type: 'container'
       #     min-versions-to-keep: 5
 
       #     token: ${{ secrets.PACKAGE_TOKEN }}
+
 
 
 
