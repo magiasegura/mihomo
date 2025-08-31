@@ -154,14 +154,13 @@ dns:
   listen: 0.0.0.0:53
   ipv6: false
   default-nameserver:
-    - tls://8.8.8.8
-    - tls://1.1.1.1
+    - tls://94.140.14.14
+    - tls://94.140.15.15
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.0/15
   nameserver:
-    - https://dns.google/dns-query
-    - https://1.1.1.1/dns-query
-    - https://dns.quad9.net/dns-query
+    - https://dns.adguard-dns.com/dns-query
+    - https://dns.adguard.com/dns-query
 hosts:
   dns.google: [8.8.8.8, 8.8.4.4]
   dns.quad9.net: [9.9.9.9, 149.112.112.112]
