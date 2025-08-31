@@ -136,10 +136,15 @@ config_file_mihomo() {
 log-level: ${LOG_LEVEL:-warning}
 external-controller: 0.0.0.0:9090
 external-ui: ui
-external-ui-url: "${EXTERNAL_UI_URL:-https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip}"
+external-ui-url: "${EXTERNAL_UI_URL:-https://github.com/Zephyruso/zashboard/releases/latest/download/dist-cdn-fonts.zip}"
 unified-delay: true
 ipv6: false
 geodata-mode: true
+geo-auto-update: true
+geo-update-interval: 24
+geox-url:
+  geosite: "https://github.com/hydraponique/roscomvpn-geosite/releases/latest/download/geosite.dat"
+  geoip: "https://github.com/hydraponique/roscomvpn-geoip/releases/latest/download/geoip.dat"
 dns:
   enable: true
   cache-algorithm: arc
@@ -149,9 +154,8 @@ dns:
   listen: 0.0.0.0:53
   ipv6: false
   default-nameserver:
-    - 8.8.8.8
-    - 9.9.9.9
-    - 1.1.1.1
+    - tls://8.8.8.8
+    - tls://1.1.1.1
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.0/15
   nameserver:
