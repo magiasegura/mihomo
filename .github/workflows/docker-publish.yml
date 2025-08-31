@@ -3,6 +3,7 @@ name: Build and publish multi-arch Docker images
 on:
   push:
     branches: [main]
+  workflow_dispatch:  
 
 jobs:
   build-and-push:
@@ -88,5 +89,6 @@ jobs:
       #     min-versions-to-keep: 5
 
       #     token: ${{ secrets.PACKAGE_TOKEN }}
+
 
 
