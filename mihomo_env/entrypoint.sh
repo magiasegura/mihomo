@@ -161,9 +161,6 @@ dns:
   nameserver:
     - https://dns.adguard-dns.com/dns-query
     - https://dns.adguard.com/dns-query
-hosts:
-  dns.google: [8.8.8.8, 8.8.4.4]
-  dns.quad9.net: [9.9.9.9, 149.112.112.112]
 
 listeners:
   - name: tun-in
